@@ -18,6 +18,13 @@ namespace MyApp.Controllers
             _logger = logger;
         }
 
+        [HttpGet("/events")]
+        public async Task<IActionResult> GetName()
+        {
+            return await Task.FromResult(Ok("Hi Sujeeth!"));
+        }
+
+
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
